@@ -8,6 +8,8 @@ eg: enhancements/EC-091-clean-up-codebase
 
 "EC-091 : " will be appended to your commit message on click of the "Prefix" button.
 
+![alt text](https://github.com/xenomech/Prefixed/blob/main/public/assets/images/demo.gif?raw=true)
+
 ## Known Issues
 
 - Cant handle multiple repositories
