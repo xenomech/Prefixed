@@ -2,10 +2,11 @@
 
 Prefix Ticket ID from the branch name to your commit message.
 
-eg: enhancements/EC-091-clean-up-codebase
-"EC-091 : " will be appended to your commit message on click of the "Prefix" button.
-  
 ## Features
+
+eg: enhancements/EC-091-clean-up-codebase
+
+"EC-091 : " will be appended to your commit message on click of the "Prefix" button.
 
 ## Known Issues
 
@@ -14,7 +15,7 @@ eg: enhancements/EC-091-clean-up-codebase
 
 ## Release Notes
 Initial Release of this extension handles common use cases
-### 1.0 s(beta)
+### 1.0 (beta)
 
 Initial beta release of Prefixed.
 

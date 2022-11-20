@@ -1,8 +1,9 @@
 {
   "name": "prefixed",
   "displayName": "Prefixed",
-  "description": "This Extention allows you to prefix ticket id from your branch name to your commit message.",
-  "version": "0.0.1",
+  "description": "This Extension allows you to prefix ticket id from your branch name to your commit message.",
+  "repository": "https://github.com/xenomech/Prefixed.git",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.73.0"
   },
@@ -14,19 +15,21 @@
   ],
   "main": "./src/extension.js",
   "contributes": {
-    "commands": [{
-      "command": "prefixed.prefixTicketID",
-      "title": "Prefix"
-    }],
+    "commands": [
+      {
+        "command": "prefixed.prefixTicketID",
+        "title": "Prefix"
+      }
+    ],
     "menus": {
-			"scm/title": [
-				{
-					"command": "prefixed.prefixTicketID",
-					"when": "scmProvider == git",
-					"group": "navigation"
-				}
-			]
-		}
+      "scm/title": [
+        {
+          "command": "prefixed.prefixTicketID",
+          "when": "scmProvider == git",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "lint": "eslint .",
