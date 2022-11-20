@@ -10,14 +10,23 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:prefixed.helloWorld"
+    "onCommand:prefixed.prefixTicketID"
   ],
-  "main": "./extension.js",
+  "main": "./src/extension.js",
   "contributes": {
     "commands": [{
-      "command": "prefixed.helloWorld",
-      "title": "Hello World"
-    }]
+      "command": "prefixed.prefixTicketID",
+      "title": "Prefix"
+    }],
+    "menus": {
+			"scm/title": [
+				{
+					"command": "prefixed.prefixTicketID",
+					"when": "scmProvider == git",
+					"group": "navigation"
+				}
+			]
+		}
   },
   "scripts": {
     "lint": "eslint .",
