@@ -8,7 +8,7 @@ function activate(context) {
 	const { defaultExpression, errors, successMsg, gitURL, genericInfoMsg } = require("./constants/common")
 	vscode.window.showInformationMessage(successMsg.activeMsg);
 
-	let disposable = vscode.commands.registerCommand('prefixed.prefixTicketID', async function () {
+	let disposable = vscode.commands.registerCommand('prefixed.prefixTicketID', async function (trigger) {
 		try {
 			const vscodeGit = vscode.extensions.getExtension('vscode.git');
 			const git = vscodeGit.exports.getAPI(1)
@@ -22,7 +22,7 @@ function activate(context) {
 					vscode.commands.executeCommand('vscode.open', vscode.Uri.parse(gitURL));
 				throw new Error(errors.repoNotFound)
 			}
-			const repo = git.repositories[0]
+			const repo = git.repositories.filter((repo) => repo.rootUri.path === trigger.rootUri.path)[0]
 			const branch = repo.state.HEAD.name;
 
 			const idRegex = new RegExp(defaultExpression, 'i');
