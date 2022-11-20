@@ -10,7 +10,6 @@ function activate(context) {
 
 	let disposable = vscode.commands.registerCommand('prefixed.prefixTicketID', async function (trigger) {
 		try {
-			console.log(trigger)
 			const vscodeGit = vscode.extensions.getExtension('vscode.git');
 			const git = vscodeGit.exports.getAPI(1)
 			if (!git) {
