@@ -12,8 +12,7 @@ eg: enhancements/EC-091-clean-up-codebase
 
 ## Known Issues
 
-- Cant handle multiple repositories
-- Cant define custom regex for specific use cases
+- [ ] Cant define custom regex for specific use cases
 
 ## Release Notes
 Initial Release of this extension handles common use cases
